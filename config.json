@@ -1,0 +1,43 @@
+{
+  "id": "hero-modern",
+  "name": "Hero Section",
+  "description": "Главная секция с заголовком и CTA кнопкой",
+  "version": "1.2.0",
+  "injections": {
+    "/src/css/hero.css": {
+      "target": "comment:hero-css",
+      "container": "head"
+    },
+    "/src/scripts/hero.js": {
+      "target": "end",
+      "container": "body"
+    }
+  },
+  "dependencies": {
+    "fonts": [
+      {
+        "tag": "<link rel='preconnect' href='https://fonts.googleapis.com' />"
+      },
+      {
+        "tag": "<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />"
+      },
+      {
+        "tag": "<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet' />"
+      }
+    ],
+    "libraries": {
+      "aos": [
+        {
+          "tag": "<link href='https://unpkg.com/aos@2.3.1/dist/aos.css' rel='stylesheet' />",
+          "target": "before-styles",
+          "container": "head"
+        },
+        {
+          "tag": "<script src='https://unpkg.com/aos@2.3.1/dist/aos.js'></script>",
+          "target": "before-scripts",
+          "container": "head"
+        }
+      ]
+    }
+  }
+}
