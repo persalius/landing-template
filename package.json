@@ -7,9 +7,13 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "start": "live-server"
+    "start": "concurrently \"npm run sass\" \"npm run live-server\"",
+    "sass": "sass --watch src/scss:src/css",
+    "live-server": "live-server"
   },
   "devDependencies": {
-    "live-server": "^1.2.2"
+    "concurrently": "^9.2.0",
+    "live-server": "^1.2.2",
+    "sass": "^1.90.0"
   }
 }
