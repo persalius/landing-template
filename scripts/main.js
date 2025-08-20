@@ -1,7 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
   fetch("src/index.html")
-    .then((response) => response.text())
+    .then((response) => {
+      return response.ok ? response.text() : null;
+    })
     .then((html) => {
-      document.getElementById("content-container").innerHTML = html;
+      if (html) {
+        document.getElementById("content-container").innerHTML = html;
+      }
     });
 });
